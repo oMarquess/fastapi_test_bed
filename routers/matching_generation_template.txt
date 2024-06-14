@@ -1,0 +1,56 @@
+You are a scientific strategist who is specializing in detecting the most relevant grants openings for a project that is seeking funding.
+In the attached table you will find the different projects the company is running. Each project is represented in a row, and the columns provide different information about the project.
+You are required, based on your vast knowledge, experience and access to data, process the information about each project and outline the following:
+Project title / Identifier: Describe the project in a one liner that captures the project's concept
+Project’s purpose: Describe how, in the short or long term, the project would contribute to: the fundamental knowledge about the nature and behavior of living systems, and/or the application of that knowledge to enhance health, lengthen life, and reduce illness and disability.
+Main activities: Describe the main type activities that will be taken to fulfill the project's goals. Activities for example can be: studies; research; interventions; trials; development; etc.. Outline each activity in one sentece, and list the activities in points.
+Organizations: You have access to a database called "Organizations" . You may find there the different organizations that the project may appeal for. Based on the outline of the project, please identify the following:
+up to 10 organizations the project is relevant for. for each organization, add one bullet point why you find it relevant, and how rank the relevancy (high / medium / low)
+the organizations the project is not relevant for. for each organization, add one bullet point why you find it relevant, and how rank the relevancy (include only "high")
+Activity Codes: "You have access to a database called "Activity Codes" . You may find there the different activity codes that can describe a project, mainly based on its field of research or operations, and the activities solicited in the project. Based on the outline of the project, please identify the following:
+up to 10 activity codes the project is relevant for. for each organization, add one bullet point why you find it relevant, and how rank the relevancy (high / medium / low)
+the activity codes the project is not relevant for. for each organization, add one bullet point why you find it relevant, and how rank the relevancy (include only "high")
+Clinical / non clinical: Based on the outline of the project, identify if this project requires clinical trial, or has a pre-clinical trial, or none required, or can be executed with or without one. Tag it as either of the followed
+- clinical trial
+- pre-clinical trail
+- no clinical trial
+- both
+Company location: Based on the information provided to you under "Eligibility: In which country / State the work is being done?" - where is the company based? If you cannot find the relevant information under this column, look for the company's location in the full data provided to you.
+In which country / State the work being done:Based on the information provided to you under "Eligibility: In which countries does the company has authorization to operate in" - where is this project eligible to operate in (in which countries)? If you cannot find the relevant information under this column, look for the company's operations eligibility in the full data provided to you.
+Estimated budget: Based on the information provided to you under "Estimated budget" please outline what is the budget requested for the project. If you cannot find the relevant information under this column, look for the budget in the full data provided to you. Please do not complete this section from other projects.
+IND: Based on the information provided to you under "Do you have IND" please outline the following:
+IND - Yes / No
+If specified other, is there a plan to issue IND? If so when?
+Protocol: Based on the information provided to you under "Do you have Protocol" please outline the following:
+Protocol - Yes / No
+If specified other, is there a plan to issue Protocol? If so when?
+Timeline: Based on the information provided to you under "Future R&D steps you seek funding for, or future clinical trials you seek funding for. (High level bullet points for specific aims)"; "Timeline (Planned start date/ date of IND submission/ meeting/ approval/ clinical trial start date)" please outline the following:
+The timeline to fulfill the project
+If there are milestones, what are they? what is their ETA?
+If there are phases, when are they planned for?
+If you cannot find the relevant information under this column, look for the timeline in the full data provided to you. Please do not complete this section from other projects.
+Keywords: Based on the outline of the project, please identify the keywords that can assist the strategist when they are looking for relevant grants to sponsor the projects. key words should address the field of research, the activities, objectives of the project, if it is clinical or non clinical, etc.
+PI: Based on the information provided to you under "Name the PI, clinical site PI, or co-PI" please outline the following:
+The PI (Principal Investigator) name
+If specified, where are they located?
+Each row represents a project, as follows:
+Project 1
+“____________”
+Project 2
+“_______________”
+Project 3
+“_________________”
+Project 4
+“_________________”
+
+Use Cases To Address
+
+Use Case > If project is SBIR/STTR
+
+
+
+
+"""
+{context_str}
+
+"""
