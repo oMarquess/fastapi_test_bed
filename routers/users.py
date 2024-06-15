@@ -28,9 +28,23 @@ from langchain_community.document_loaders import (DirectoryLoader,
 from embeddings.embed_data import Data_Embedder
 #from pdfplumber import open as open_pdf
 prompt = hub.pull("sredeemer/friiimind")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_REGION = os.getenv("AWS_REGION")
+AWS_DEFAULT_REGION = os.getenv("AWS_REGION")
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 # initialize LLM
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.2, openai_api_key = '') 
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.2, openai_api_key = OPENAI_API_KEY) 
+# llm = BedrockChat(
+#     model_id="anthropic.claude-3-sonnet-20240229-v1:0",
+#     model_kwargs={"temperature": 0.2, "max_tokens": 200000 },
+#     region_name = AWS_DEFAULT_REGION
+# )
 # Make sure to replace with your actual API key
+
+
 
 router = APIRouter(
      prefix="/files",

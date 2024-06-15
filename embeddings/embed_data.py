@@ -10,6 +10,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter,CharacterText
 from langchain_chroma import Chroma as Chroma_db
 from langchain_core.documents import Document
 from langchain_openai import OpenAIEmbeddings
+from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 
 
 # Setup logging
@@ -41,7 +42,8 @@ class Data_Embedder:
         # documents_content = [doc.page_content for doc in chunks]
 
         #  embedding function
-        embeddings_funk = OpenAIEmbeddings(model="text-embedding-ada-002")
+        embeddings_funk =  SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+        #OpenAIEmbeddings(model="text-embedding-ada-002")
        
         # load it into Chroma
         db = Chroma_db.from_documents(docs, embeddings_funk)
@@ -122,7 +124,8 @@ class Data_Embedder:
             db = Chroma(
                 client=chroma_client,
                 collection_name=collection_name,
-                embedding_function=OpenAIEmbeddings(),
+                #embedding_function=OpenAIEmbeddings(),
+                embedding_function=embeddings_funk
             )
             logger.info("✅ Embedding Successful")
 
