@@ -36,7 +36,7 @@ class Data_Embedder:
     '''
     def temp_embed(self,data):
 
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=100)
         docs = text_splitter.create_documents([data])
 
         # documents_content = [doc.page_content for doc in chunks]
