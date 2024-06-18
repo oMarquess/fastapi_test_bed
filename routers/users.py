@@ -114,6 +114,8 @@ async def generate_matching_criteria(files: List[UploadFile] = File(...)):
                             logging.info(f"Response written to file: {response_file_path}")
 
                         # Embedding the response
+                        #### Replace with Data_Embedder
+                        
                         raw_documents = TextLoader(response_file_path).load()
                         text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
                         documents = text_splitter.split_documents(raw_documents)
